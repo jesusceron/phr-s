@@ -1,0 +1,65 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}problem list 2{% endblock %}
+{% block content %}
+
+ <div align="center"><center>
+<table>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="6"><center><img src="{{ STATIC_HOME }}/css/sunny/images/head1.png"/></center></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><a href="index"><font color="#C032B6" face="Verdana"><em><strong>Home</strong></em></font></a></td>
+        <td><a href="aed_about"><font color="#C032B6" face="Verdana"><em><strong>About</strong></em></font></a></td>
+        {% if not in_carenet %}<td><a href="new"><font color="#C032B6" face="Verdana"><em><strong>CSBS_DB</strong></em></font></a></td>
+        <td><a href="tenquestion"><font color="#C032B6" face="Verdana"><em><strong>Ten Questions</strong></em></font></a></td>{% endif %}
+        <td><a href="eeg"><font color="#C032B6" face="Verdana"><em><strong>EEG</strong></em></font></a></td>
+        <td><a href="problem_list"><font color="#C032B6" face="Verdana"><em><strong>Data</strong></em></font></a></td>
+    </tr>
+</table>
+</center>
+
+  {% if not in_carenet %}<h2><font color="#3C95B7" size="6" face="Verdana"><em><strong>Your Answer</strong></em></font></h2>{% endif %}
+  {% if in_carenet %}<h2><font color="#3C95B7" size="6" face="Verdana"><em><strong>Survey's Answer</strong></em></font></h2>{% endif %}
+
+  {% ifequal num_problems 0 %}
+  {% else %}
+
+    <table class="light">
+      
+      {% if not in_carenet %}
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align: right">don´t forget to share your answer with your doctor!!!</td>
+        </tr>
+      </tfoot>
+      {% endif %}
+      <tbody>
+        {% for p in problems %}
+	  	  
+	  {% if not in_carenet %}
+          <tr class="{% cycle 'odd' 'even' %}">
+            <td><a href="{{p.id}}"><font color="#C032B6" size="6" face="Verdana"><em><strong><u>{{p.id}}</u></strong></em></font></td>
+          </tr>
+	  {% endif %}
+
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endifequal %}
+{% endblock %}

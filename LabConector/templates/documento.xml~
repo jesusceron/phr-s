@@ -1,0 +1,14 @@
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+	<Model name="patient">
+		<Field name="id_patient">{{documento}}</Field>
+		<Field name="id_record">{{record_id}}</Field>
+		<Field name="name1">{{name1}}</Field>
+		<Field name="name2">{{name2}}</Field>
+		<Field name="apellido1">{{surname1}}</Field>
+		<Field name="apellido2">{{surname2}}</Field>
+		<Field name="genero">{{gender}}</Field>
+		<Field name="fecha_nacimiento">{{dob}}</Field>
+		<Field name="direccion">{{address}}</Field>
+		<Field name="clave_verificacion">{{clave_verificacion}}</Field>
+	</Model>
+</Models>

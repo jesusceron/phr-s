@@ -1,0 +1,6 @@
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+  <Model name="Metadata">
+	<Field name="date">{{date}}</Field>
+	<Field name="description">{{description}}</Field>
+  </Model>
+</Models>

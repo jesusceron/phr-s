@@ -1,0 +1,61 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}problem list{% endblock %}
+{% block content %}
+
+
+{% if record_id %}
+<script>
+  Indivo.Auth.setToken("{{surl_credentials.token}}","{{surl_credentials.secret}}");
+</script>
+{% endif %}
+
+{% if not in_carenet %}<h1>Examen Importado!</h1>{% endif %}
+
+{% if record_id %}
+  <script>
+    Indivo.Widget.DocumentAccess.add('{{record_id}}', '{{poll_id}}');
+  </script>
+{% endif %}
+
+<table class="light" style="width: 66%; margin: 2em 0;">
+  <tbody>
+	<form method="Post" action="">
+          <tr>
+            <td></td>
+          </tr>
+	  <tr>
+            <td>Título del examen:<br><font color="red">{{problem.test_name_title}}<input type="hidden" name="test_name_title" value={{problem.test_name_title}}/></font></td>
+          </tr>
+	  <tr>
+            <td>rango normal del examen:<br><font color="red">{{problem.quantitative_result_normal_range_min_value}} {{problem.quantitative_result_normal_range_min_unit}} hasta {{problem.quantitative_result_normal_range_max_value}} {{problem.quantitative_result_normal_range_max_unit}}<input type="hidden" name="quantitative_result_normal_range_min_value" value={{problem.quantitative_result_normal_range_min_value}}><input type="hidden" name="quantitative_result_normal_range_min_unit" value={{problem.quantitative_result_normal_range_min_unit}}><input type="hidden" name="quantitative_result_normal_range_max_value" value={{problem.quantitative_result_normal_range_max_value}}><input type="hidden" name="quantitative_result_normal_range_max_unit" value={{problem.quantitative_result_normal_range_max_unit}}></font></td>
+          </tr>
+	  <tr>
+            <td>Resultado del examen:<br><font color="red">{{problem.quantitative_result_value_value}} {{problem.quantitative_result_value_unit}}<input type="hidden" name="quantitative_result_value_value" value={{problem.quantitative_result_value_value}}><input type="hidden" name="quantitative_result_value_unit" value={{problem.quantitative_result_value_unit}}></font></td>
+          </tr>
+	  <tr>
+<td>
+{% if problem.collected_by_org_adr_street %}
+            Médico:<br><font color="red">{{problem.collected_by_name_given}} {{problem.collected_by_name_prefix}} {{problem.collected_by_name_suffix}} {{problem.collected_by_name_family}}
+{% endif %}
+<input type="hidden" name="namedoctor1" value={{problem.collected_by_name_given}}><input type="hidden" name="namedoctor2" value={{problem.collected_by_name_prefix}}>
+<input type="hidden" name="namedoctor3" value={{problem.collected_by_name_suffix}}>
+<input type="hidden" name="namedoctor4" value={{problem.collected_by_name_family}}></font></td>
+
+          </tr>
+	  <tr>
+<td>
+{% if problem.collected_by_org_adr_street %}
+laboratorio:<br><font color="red">Laboratorio Clinico Andes. Direccion: {{problem.collected_by_org_adr_street}}{{problem.collected_by_org_adr_city}}
+{% endif %}
+<input type="hidden" name="laboratoryname" value="falta NOMBRE"><input type="hidden" name="collected_by_org_adr_city" value={{problem.collected_by_org_adr_city}}><input type="hidden" name="collected_by_org_adr_street" value={{problem.collected_by_org_adr_street}}><input type="hidden" name="collected_at" value={{problem.collected_at}}></font></td>
+
+
+          </tr>
+	  <tr>
+            <td><input align = "center" type="submit" value="Exportar como CDA"/></td>
+          </tr>
+	 </form> 
+      </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}ten question{% endblock %}
+{% block content %}
+
+ <div align="center"><center>
+<table>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="6"><center><img src="{{ STATIC_HOME }}/css/sunny/images/head1.png"/></center></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><a href="index"><font color="#C032B6" face="Verdana"><em><strong>Home</strong></em></font></a></td>
+        <td><a href="aed_about"><font color="#C032B6" face="Verdana"><em><strong>About</strong></em></font></a></td>
+        <td><a href="new"><font color="#C032B6" face="Verdana"><em><strong>CSBS_DB</strong></em></font></a></td>
+        <td><a href="tenquestion"><font color="#C032B6" face="Verdana"><em><strong>Ten Questions</strong></em></font></a></td>
+        <td><a href="eeg"><font color="#C032B6" face="Verdana"><em><strong>EEG</strong></em></font></a></td>
+        <td><a href="problem_list"><font color="#C032B6" face="Verdana"><em><strong>Data</strong></em></font></a></td>
+    </tr>
+</table>
+</center><center>
+
+<form method="post" action="">
+     <table class="light form">
+	<tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>   
+	<tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>    
+	<tr>
+        <td><center>Do you know when your child is happy and when your child is upset?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q1" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q1" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q1" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>When your child plays with toys, does he/she look at you to see if you are watching?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q2" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q2" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q2" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>q3  Does your child smile or laugh while looking at you?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q3" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q3" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q3" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>When you look at and point to a toy across the room, does your child look at it?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q4" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q4" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q4" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>q5  Does your child let you know that he/she needs help or wants an object out of reach?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q5" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q5" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q5" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>When you are not paying attention to your child, does he/she try to get your attention?</center></td>
+        <td>
+         <br></br>
+			<input type="radio" checked name="q6" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q6" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q6" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>Does your child do things just to get you to laugh?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q7" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q7" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q7" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>Does your child pick up objects and give them to you?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q8" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q8" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q8" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+	<tr>
+        <td><center>Does your child show objects to you without giving you the object?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q9" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q9" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q9" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+      <tr>
+        <td><center>Does your child wave to greet people?</center></td>
+        <td>
+          <br></br>
+			<input type="radio" checked name="q10" value="Not yet" /><label>Not yet</label>
+			<br></br><input type="radio" name="q10" value="Sometimes" /><label>Sometimes</label>
+			<br></br><input type="radio" name="q10" value="Often" /><label>Often</label>	
+        </td>
+      </tr>
+    </table></center>
+
+    <br />
+    
+    <div style="text-align: center">
+      <input type="submit" value="Save" style="width: 33%"/>
+    </div>
+  </form>
+
+</center></div>
+{% endblock %}

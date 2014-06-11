@@ -1,0 +1,5 @@
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+  <Model name="Prueba">
+    <Field name="test_text">{{texto}}</Field>
+  </Model>
+</Models>

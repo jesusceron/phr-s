@@ -1,0 +1,49 @@
+{% extends 'autismscreening/templates/baseindex.html' %}
+{% block title %}index{% endblock %}
+{% block content %}
+
+	{% if id_patient == 0 %}
+	<!-- Menú de navegación del sitio -->
+	<ul class="navbar">
+ 	 <li><a href="index">Página principal</a>
+	</ul>	
+	{% else %}
+	<ul class="navbar">
+ 	<li><a href="index">Página principal</a>
+	<li><a href="new">Exámenes Disponibles</a>
+  	<li><a href="problem_list">Exámenes Importados</a>
+	<li><a href="agregarmuestra">Agregar Muestra</a>
+	</ul>	
+	{% endif %}
+	<table>
+	<tr><td><h1>Bienvenido a Indivo Interoperable</h1></td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>Con esta aplicación puedes ver los resultados de tus exámenes de laboratorio, importarlos a tu cuenta en Indivo o exportarlos a otros sistemas si así lo deseas</td></tr>
+	</table>
+    
+   {% if id_patient == 0 %}
+	<table>
+
+    <form method="Post" action="">
+    <tr>
+        <td><p>INGRESA TU NÚMERO DE DOCUMENTO:</p><input type="text" name="NoDocumento"></td>
+	<td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><p>INGRESA TU CLAVE:</p><input type="password" name="Clave"></td>
+	<td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+	<td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><div style="text-align: center"><input type="submit" value="Registrar"/></div></td>
+    </tr>
+    </form>
+</table>{% endif %}
+    
+<address>Universidad del Cauca 2013</address>
+    
+
+{% endblock %}

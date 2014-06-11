@@ -1,0 +1,19 @@
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+  <Model name="audata">
+	<Field name="data1">{{data1}}</Field>
+	<Field name="data2">{{data2}}</Field>
+	<Field name="data3">{{data3}}</Field>
+	<Field name="data4">{{data4}}</Field>
+	<Field name="data5">{{data5}}</Field>
+	<Field name="data6">{{data6}}</Field>
+	<Field name="data7">{{data7}}</Field>
+	<Field name="data8">{{data8}}</Field>
+	<Field name="data9">{{data9}}</Field>
+	<Field name="data10">{{data10}}</Field>
+	<Field name="data11">{{data11}}</Field>
+	<Field name="data12">{{data12}}</Field>
+	<Field name="data13">{{data13}}</Field>
+	<Field name="data14">{{data14}}</Field>
+	<Field name="data15">{{data15}}</Field>	
+  </Model>
+</Models>

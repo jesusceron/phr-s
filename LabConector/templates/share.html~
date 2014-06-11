@@ -1,0 +1,27 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}problem list{% endblock %}
+{% block content %}
+
+  {% if not in_carenet %}<h1>Exámenes Importados</h1>{% endif %}
+  {% if in_carenet %}<h1>Examenes compartidos</h1>{% endif %}
+
+  {% ifequal num_problems 0 %}
+  {% else %}
+
+    <table class="light">
+      
+
+      <tbody>
+        {% for p in problems %}
+	  	  
+	  
+          <tr class="{% cycle 'odd' 'even' %}">
+            <td><a href="{{p.id}}"><img src="{{ STATIC_HOME }}/css/sunny/images/clip.png"/><font color="black" size="3" face="Verdana"><em><strong>{{p.test_name_title}}{{p.collected_at}}</strong></em></font></a></td>
+          </tr>
+	  
+
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endifequal %}
+{% endblock %}

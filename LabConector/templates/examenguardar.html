@@ -1,0 +1,60 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}document list{% endblock %}
+{% block content %}   
+<div align="center">
+
+   <h1>Examen a guardar</h1>
+    <table class="light">
+      
+       <tbody>       		 
+		
+	    <form method="Post" action="">
+		    <tr>
+		        <td><input type="hidden" name="control" value="1"/></td>
+		        <td>Titulo: <br><font color="red">{{titulo}}</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td>Codigo: <br><font color="red">{{codigo}}</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td>Fecha de toma: <br><font color="red">{{fecha}}</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td>Rango normal de la prueba: <br>desde <font color="red">{{lvalue}}{{lvalueu}}</font><br> hasta <font color="red">{{hvalue}}{{hvalueu}} </font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td>Resultado de tu examen: <br><font color="red">{{value}}{{valueu}}</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td>Médico: <br><font color="red">{{namedoctor1}} {{namedoctor2}} {{namedoctor3}} {{namedoctor4}}</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+			<td>&nbsp;</td>
+		        <td>Laboratorio: <br><font color="red">Laboratorio Clinico Andes</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td>Direccion: <br><font color="red">{{direccion}} {{ciudad}}</font></td>
+		        <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		        <td>&nbsp;</td>
+		        <td><div style="text-align: center"><input type="submit" value="IMPORTAR ESTE EXAMEN"/></div></td>
+		        <td>&nbsp;</td>
+		    </tr>		    
+
+		
+	     </form>
+{% endblock %}

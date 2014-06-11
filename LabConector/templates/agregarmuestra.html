@@ -1,0 +1,29 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}index{% endblock %}
+{% block content %}
+
+	<table>
+	<tr><td><h1>Ingresa el valor de glicemia de tu examen:</h1></td></tr>
+	<tr><td>Luego de la toma del examen de glicemia, ingresa el valor resultante aquí para que sea guardado en tu registro. Recuerda que puedes ver todos tus exámenes de laboratorio utilizando la aplicación llamada: LabResults</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+    
+	<table>
+
+    <form method="Post" action="">
+    <div style="text-align: center"><p>Valor de la muestra:</p><input type="text" name="valormuestra">
+		<input type="hidden" name="name1" value={{p.name1}}>
+		<input type="hidden" name="name2" value={{p.name2}}>
+		<input type="hidden" name="surname1" value={{p.surname1}}>
+		<input type="hidden" name="surname2" value={{p.surname2}}>
+		<input type="hidden" name="gender" value={{p.gender}}>
+		<input type="hidden" name="dob" value={{p.dob}}>
+		<input type="hidden" name="address" value={{p.address}}>
+<br/>
+	<input type="submit" value="Agregar"/></div>
+
+    
+<address>Universidad del Cauca 2013</address>
+    
+
+{% endblock %}

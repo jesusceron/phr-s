@@ -1,0 +1,15 @@
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+  <Model name="Autismscreeninganswers">
+	<Field name="poll">{{poll}}</Field>
+	<Field name="aq1">{{aq1}}</Field>
+	<Field name="aq2">{{aq2}}</Field>
+	<Field name="aq3">{{aq3}}</Field>
+	<Field name="aq4">{{aq4}}</Field>
+	<Field name="aq5">{{aq5}}</Field>
+	<Field name="aq6">{{aq6}}</Field>
+	<Field name="aq7">{{aq7}}</Field>
+	<Field name="aq8">{{aq8}}</Field>
+	<Field name="aq9">{{aq9}}</Field>
+	<Field name="aq10">{{aq10}}</Field>
+  </Model>
+</Models>

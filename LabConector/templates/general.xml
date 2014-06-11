@@ -1,0 +1,9 @@
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+  <Model name="aupatient">
+	<Field name="id_patient">{{id_patient}}</Field>
+	<Field name="childs_name">{{childs_name}}</Field>
+	<Field name="date_of_birth">{{date_of_birth}}</Field>
+	<Field name="caregiver">{{caregiver}}</Field>
+	<Field name="relationship_to_child">{{relationship}}</Field>
+  </Model>
+</Models>

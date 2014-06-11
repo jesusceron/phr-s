@@ -1,0 +1,26 @@
+
+<Models xmlns="http://indivo.org/vocab/xml/documents#">
+
+<Model name="LabResultImported">
+    <Field name="accession_number"><![CDATA[A763709999]]></Field>
+    <Field name="test_name_title"><![CDATA[{{titulo}}]]></Field>
+    <Field name="test_name_system">http://purl.bioontology.org/ontology/LNC/</Field>
+    <Field name="test_name_identifier"><![CDATA[{{codigo}}]]></Field>
+    <Field name="collected_at"><![CDATA[{{fecha}}]]></Field>
+    
+<Field name="quantitative_result_normal_range_max_value"><![CDATA[{{hvalue}}]]></Field>
+<Field name="quantitative_result_normal_range_max_unit"><![CDATA[{{hvalueu}}]]></Field>
+<Field name="quantitative_result_normal_range_min_value"><![CDATA[{{lvalue}}]]></Field>
+<Field name="quantitative_result_normal_range_min_unit"><![CDATA[{{lvalueu}}]]></Field>
+<Field name="quantitative_result_value_value"><![CDATA[{{value}}]]></Field> 
+<Field name="quantitative_result_value_unit"><![CDATA[{{valueu}}]]></Field>
+<Field name="collected_by_org_adr_city"><![CDATA[{{ciudad}}]]></Field>
+<Field name="collected_by_org_adr_street"><![CDATA[{{direccion}}]]></Field>
+<Field name="collected_by_name_given"><![CDATA[{{namedoctor1}}]]></Field>
+<Field name="collected_by_name_prefix"><![CDATA[{{namedoctor2}}]]></Field>
+<Field name="collected_by_name_suffix"><![CDATA[{{namedoctor3}}]]></Field>
+<Field name="collected_by_name_family"><![CDATA[{{namedoctor4}}]]></Field>
+
+</Model>
+
+</Models>

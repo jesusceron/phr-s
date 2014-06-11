@@ -1,0 +1,26 @@
+{% extends 'prueba/templates/base.html' %}
+{% block title %}new prueba{% endblock %}
+{% block content %}
+
+<h2>Nuevo Test &nbsp;&nbsp;<span style="font-size:0.7em; font-weight: normal; text-transform: uppercase">[<a href="./">Cancel</a>]</span></h2>
+
+  <form method="post" action="">
+    <table class="light form">
+      <col style="width: 20%"></col>
+      <col style="width: 80%"></col>
+      <tr>
+        <td>Texto Prueba:</td>
+        <td>
+          <input type="text" name="texto" id="texto_full" style="width: 100%" />
+        </td>
+      </tr>
+    </table>
+
+    <br />
+    
+    <div style="text-align: center">
+      <input type="submit" value="hacer prueba" style="width: 33%"/>
+    </div>
+  </form>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'autismscreening/templates/base.html' %}
+{% block title %}document list{% endblock %}
+{% block content %}
+
+  {% if not in_carenet %}<h2><font color="#3C95B7" size="6" face="Verdana"><em><strong>Exámenes Disponibles</strong></em></font></h2>{% endif %}
+  {% if in_carenet %}<h2><font color="#3C95B7" size="6" face="Verdana"><em><strong>Examenes compartidos</strong></em></font></h2>{% endif %}
+
+  {% ifequal NoExamenes 0 %}
+	<h2><em>No tienes exámenes disponibles</em><h2>
+  {% else %}
+
+    <table class="light">
+      
+      {% if not in_carenet %}
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align: right">da click en algún link para ver el examen</td>
+        </tr>
+      </tfoot>
+      {% endif %}
+      <tbody>
+        	{% for e in NoExamenes %} 
+		<form id="form{{e}}" action="" method="post">
+		<tr class="{% cycle 'odd' 'even' %}">
+    			<td>
+				<a href="javascript:;" onclick="document.getElementById('form{{e}}').submit();">
+				<img src="{{ STATIC_HOME }}/css/sunny/images/clip.png"/>
+				<font color="black" size="3" face="Verdana"><em><strong>
+    				{% if e == '0' %}{{examen0}}{% endif %}	
+				{% if e == '1' %}{{examen1}}{% endif %}
+				{% if e == '2' %}{{examen2}}{% endif %}
+				{% if e == '3' %}{{examen3}}{% endif %}
+				{% if e == '4' %}{{examen4}}{% endif %}
+				{% if e == '5' %}{{examen5}}{% endif %}
+				{% if e == '6' %}{{examen6}}{% endif %}
+				{% if e == '7' %}{{examen7}}{% endif %}
+				{% if e == '8' %}{{examen8}}{% endif %}
+				{% if e == '9' %}{{examen9}}{% endif %}
+				{% if e == '10' %}{{examen10}}{% endif %}
+				{% if e == '11' %}{{examen11}}{% endif %}
+				{% if e == '12' %}{{examen12}}{% endif %}
+				{% if e == '13' %}{{examen13}}{% endif %}
+				{% if e == '14' %}{{examen14}}{% endif %}
+				{% if e == '15' %}{{examen15}}{% endif %}
+				{% if e == '16' %}{{examen16}}{% endif %}
+				{% if e == '17' %}{{examen17}}{% endif %}
+				{% if e == '18' %}{{examen18}}{% endif %}
+				{% if e == '19' %}{{examen19}}{% endif %}
+				{% if e == '20' %}{{examen20}}{% endif %}
+				</strong></em></font></a>
+	    			<input type="hidden" name="NoExamen" value={{e}}>
+			</td>
+		</tr>
+		<input type="hidden" name="control" value="0"/>
+	 	 </form>
+		{% endfor %}        
+      </tbody>
+    </table>
+  {% endifequal %}
+  
+{% endblock %}
